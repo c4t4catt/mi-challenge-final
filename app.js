@@ -34,7 +34,7 @@ function actualizarLista() {
     }
 }
 
-// Función para sortear amigos secretos (lógica básica para el sorteo)
+// Función para sortear amigos secretos
 function sortearAmigo() {
     if (amigos.length < 2) {
         alert("Debe haber al menos dos amigos para realizar el sorteo.");
@@ -47,7 +47,7 @@ function sortearAmigo() {
     // Mezclar aleatoriamente los amigos
     sorteados = sorteados.sort(() => Math.random() - 0.5);
 
-    // Asegurarse de que nadie se sortee a sí mismo
+    // Para que nadie se sortee a sí mismo
     for (let i = 0; i < amigos.length; i++) {
         // Si el amigo sorteado es el mismo que el amigo actual, intercambiamos los amigos
         if (amigos[i] === sorteados[i]) {
@@ -75,9 +75,9 @@ function mostrarResultadoSorteo(resultado) {
     }
 }
 
-// Agregar evento para presionar Enter
+// Para que se pueda presionar Enter
 document.querySelector("#amigo").addEventListener("keypress", function(event) {
-    // Si se presiona Enter (código 13)
+    // Si se presiona Enter
     if (event.key === "Enter") {
         agregarAmigo(); // Llamamos a la función de agregar amigo
     }
